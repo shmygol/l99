@@ -4,6 +4,6 @@
 
 ## Run tests
 
-    ```
-    sbcl --disable-debugger --load unittests.lisp
-    ```
+```
+sbcl --disable-debugger --load unittests.lisp
+```
