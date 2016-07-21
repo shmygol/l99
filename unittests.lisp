@@ -27,7 +27,9 @@
   (assert-equal "last" (my-last '(1 2 3 "last"))))
 
 (define-test "Problem 02"
-  (assert-equal '("pre-last" "last") (my-but-last '(1 2 "pre-last" "last"))))
+  (assert-equal '("pre-last" "last") (my-but-last '(1 2 3 "pre-last" "last")))
+  (assert-equal '("only-one") (my-but-last '("only-one")))
+  (assert-equal nil (my-but-last nil)))
 
 (define-test "Problem 03"
   (dolist (i '((('(1 2 "pre-last" "last") '0) 1)

@@ -5,6 +5,10 @@
 
 (defun my-but-last (given-list &optional (prev-el Nil)) 
   "last but one box of a list"
-  (if (null (cdr given-list))
-    (cons prev-el given-list)
-    (my-but-last (cdr given-list) (car given-list))))
+  (if (null given-list)
+    nil
+    (or
+      (my-but-last (cdr given-list) (car given-list))
+      (if (null prev-el)
+        given-list
+        (cons prev-el given-list)))))
