@@ -23,6 +23,7 @@
 (load "17.lisp")
 
 (define-test "Problem 01"
+  (assert-equal (my-last nil) nil)
   (assert-equal (my-last '(1 2 3 "last")) "last"))
 
 (define-test "Problem 02"

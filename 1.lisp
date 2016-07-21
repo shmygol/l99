@@ -3,8 +3,8 @@
 ;;; *(my-last '(a b c d))
 ;;; (D)
 
-(defun my-last (given-list) 
+(defun my-last (given-list)
   "last box of a list"
-  (if (null (cdr given-list))
-    (car given-list)
-    (my-last (cdr given-list))))
+  (if (null given-list) 
+    nil
+    (or (my-last (cdr given-list)) (car given-list))))
